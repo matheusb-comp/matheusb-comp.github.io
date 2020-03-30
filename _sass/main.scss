@@ -1,0 +1,15 @@
+/**
+* This is the main sass partial file, imported by /assets/css/main.scss
+* Jekyll processes the asset file (it has front matter) into CSS
+* More info: https://jekyllrb.com/docs/assets/#sassscss
+*/
+
+@import "variables";
+
+body {
+  background-color: $background;
+}
+
+.content {
+  margin: 0 auto;
+}
