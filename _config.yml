@@ -1,0 +1,10 @@
+---
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+- ".gitignore"
+- ".jekyll-cache"
+- CNAME
+- README.md
