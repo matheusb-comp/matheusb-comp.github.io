@@ -1,1 +1,13 @@
-<div>TODO</div>
+<div>
+  {% if profile.github_username %}
+    <div class="profile">{% avatar profile.github_username %}</div>
+  {% elseif profile.avatar %}
+    <div class="profile">
+      <img
+        class="avatar avatar-small"
+        alt="profile picture"
+        src="{{ '/assets/img/' | append: profile.avatar | relative_url }}"
+      >
+    </div>
+  {% endif %}
+</div>
