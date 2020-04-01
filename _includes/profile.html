@@ -1,11 +1,13 @@
-{% assign sidebar = site.data.data.profile %}
+{% assign profile = site.data.data.profile %}
 <div>
   {% if profile.github_username %}
-    <div class="profile">{% avatar profile.github_username %}</div>
+    <div class="profile">
+      {% avatar size=420 user=profile.github_username %}
+    </div>
   {% elsif profile.avatar %}
     <div class="profile">
       <img
-        class="avatar avatar-small"
+        class="avatar"
         alt="profile picture"
         src="{{ '/assets/img/' | append: profile.avatar | relative_url }}"
       >
