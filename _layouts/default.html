@@ -1,24 +1,21 @@
----
----
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% raw %}{% seo %}{% endraw %}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{{ '/assets/css/main.css' | relative_url }}"
+    >
+    {% seo %}
+  </head>
+  <body>
+    {{ content }}
 
-  <link
-    rel="stylesheet"
-    type="text/css"
-    media="screen"
-    href="{{ '/assets/css/main.css' | relative_url }}"
-  >
-</head>
-<body>
-  {{ content }}
-
-  <!-- <script src='main.js'></script> -->
-</body>
+    <!-- <script src='main.js'></script> -->
+    {%- include analytics.html -%}
+  </body>
 </html>
